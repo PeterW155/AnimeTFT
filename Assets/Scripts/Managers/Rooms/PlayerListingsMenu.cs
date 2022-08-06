@@ -13,10 +13,21 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
     private Transform _content;
 
     private List<PlayerListing> _listings = new List<PlayerListing>();
+    private RoomsCanvases _roomsCanvases;
 
     private void Awake()
     {
         GetCurrentRoomPlayers();
+    }
+
+    public override void OnLeftRoom()
+    {
+        _content.DestroyChildren();
+    }
+
+    public void FirstInitialize(RoomsCanvases canvases)
+    {
+        _roomsCanvases = canvases;
     }
 
     private void GetCurrentRoomPlayers()
