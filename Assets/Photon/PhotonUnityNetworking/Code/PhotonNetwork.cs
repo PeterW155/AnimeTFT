@@ -3306,7 +3306,12 @@ namespace Photon.Pun
             }
         }
 
-        #endif
+        public static void RaiseEvent(byte cOLOR_CHANGE_EVENT, object[] datas, object @default)
+        {
+            throw new NotImplementedException();
+        }
+
+#endif
 
     }
 }
